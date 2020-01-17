@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Abah Kue</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -62,7 +62,7 @@
 	            <div class="col-md-12 ftco-animate text-center">
 	              <h1 class="mb-2">Selamat Datang</h1>
 	              <h2 class="subheading mb-4">Murah Meriah Mengenyangkan</h2>
-	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+
 	            </div>
 
 	          </div>
@@ -77,7 +77,7 @@
 	            <div class="col-sm-12 ftco-animate text-center">
 	              <h1 class="mb-2">Abah Kue</h1>
 	              <h2 class="subheading mb-4"></h2>
-	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+
 	            </div>
 
 	          </div>
@@ -147,7 +147,7 @@
 									<div class="text text-center">
 										<h2>Aneka Makanan</h2>
 										<p>Protect the health of every home</p>
-										<p><a href="#" class="btn btn-primary">Shop now</a></p>
+
 									</div>
 								</div>
 							</div>
