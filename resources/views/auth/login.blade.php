@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <html lang="en">
 <head>
-	<title>Login V17</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -100,7 +100,7 @@
 <!--===============================================================================================-->
 	<script src="/frontend/Login_v17/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="/frontend/Login_v17/js/main.js"></script>
 
 </body>
 </html>

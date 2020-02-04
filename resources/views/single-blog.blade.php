@@ -44,7 +44,9 @@
             </li>
 	          <li class="nav-item"><a href="about" class="nav-link">About</a></li>
 	          <li class="nav-item active"><a href="blog" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
+              <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>

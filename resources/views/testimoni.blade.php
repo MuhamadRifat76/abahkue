@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/frontend/vegefoods/css/icomoon.css">
     <link rel="stylesheet" href="/frontend/vegefoods/css/style.css">
   </head>
-     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index">Abah Kue</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,9 @@
 	          <li class="nav-item dropdown">
 
             </li>
-	          <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+	          <li class="nav-item active"><a href="about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
-              <li class="nav-item active"><a href="contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
               <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
@@ -54,70 +54,156 @@
 	  </nav>
     <!-- END nav -->
 
-    <div class="hero-wrap hero-bread" style="background-image: url('/frontend/vegefoods/images/12.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('/frontend/vegefoods/images/18.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index">Home</a></span> <span>Contact us</span></p>
-            <h1 class="mb-0 bread">Contact us</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index">Home</a></span> <span>testimoni</span></p>
+            <h1 class="mb-0 bread">Testimoni</h1>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-section contact-section bg-light">
+
+		<section class="ftco-section testimony-section">
       <div class="container">
-      	<div class="row d-flex mb-5 contact-info">
-          <div class="w-100"></div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Address:</span> jl.lewipanjang kel.kebonlega2 kec.bojongloa kidul kota bandung</p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Phone:</span> <a href="tel://1234567920">* 222 123 772</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">muhamadrifat11@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="info bg-white p-4">
-	            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-	          </div>
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading">Testimony</span>
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>beberapa pendapat orang terhadap produk abah kue</p>
           </div>
         </div>
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Menurut saya produk dari Abah Kue ini sangatlah enak ditambah lagi harganya murah meriah.</p>
+                    <p class="name">Naga Bonar</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
               </div>
-            </form>
-
-          </div>
-
-          <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-shipped"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Free Shipping</h3>
+                <span>On order over $100</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Always Fresh</h3>
+                <span>Product well package</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-award"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Superior Quality</h3>
+                <span>Quality Products</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Support</h3>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
@@ -173,9 +259,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">jl.lewipanjang kel.kebonlega2 kec.bojongloa kidul kota bandung</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0000000000</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">muhamadrifat11@gmail.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
