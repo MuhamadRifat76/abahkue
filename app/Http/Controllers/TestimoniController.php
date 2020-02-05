@@ -16,7 +16,7 @@ class TestimoniController extends Controller
     public function index()
     {
         $testimoni = Testimoni::all();
-        return view('testimoni.index', compact('testimonia'));
+        return view('admin.testimoni.index', compact('testimoni'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TestimoniController extends Controller
      */
     public function create()
     {
-        //
+        return view('testimoni.create');
     }
 
     /**
@@ -37,7 +37,12 @@ class TestimoniController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $testimoni = new Testimoni;
+        $testimoni->testimoni_kode = $request->testimoni_kode;
+        $testimoni->testimoni_nama = $request->testimoni_nama;
+        $testimoni->save();
+        //6.tampilkan berhasil
+        return redirect()->route('admin.testimoni.index')->with('success', 'Berhasil ditambah');;
     }
 
     /**
@@ -59,7 +64,8 @@ class TestimoniController extends Controller
      */
     public function edit($id)
     {
-        //
+        $testimoni = Testimoni::findOrFail($id);
+        return view('admin.testimoni.edit', compact('testimoni'));
     }
 
     /**
@@ -71,7 +77,11 @@ class TestimoniController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $testimoni = Testimoni::findOrFail($id);
+        $testimoni->testimoni_kode = $request->testimoni_kode;
+        $testimoni->testimoni_nama = $request->testimoni_nama;
+        $testimoni->save();
+        return redirect()->route('admin.testimoni.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -82,6 +92,7 @@ class TestimoniController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (!Testimoni::destroy($id)) return redirect()->back();
+        return redirect()->route('admin.testimoni.index');
     }
 }

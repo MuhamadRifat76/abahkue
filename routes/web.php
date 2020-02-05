@@ -47,6 +47,7 @@ Route::get('/galerikegiatan', function () {
 });
 
 
+
 Auth::routes(['register' => false]);
 Route::group(['/prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
     Route::get('/home', function () {
