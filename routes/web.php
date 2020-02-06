@@ -49,11 +49,10 @@ Route::get('/galerikegiatan', function () {
 
 
 Auth::routes(['register' => false]);
-Route::group(['/prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
-    Route::get('/home', function () {
-        return view("admin.home");
-    });
-    Route::get('/testimoni', 'TestimoniController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['/prefix' => 'admin', 'middleware' => ['auth']], function () {
 
-    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::resource('/admin/testimoni', 'TestimoniController');
+    Route::resource('/admin/jeniskue', 'JeniskueController');
 });

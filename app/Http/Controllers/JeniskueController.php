@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\testimoni;
+use App\jeniskue;
 use Session;
 use Illuminate\Http\Request;
 
-class TestimoniController extends Controller
+class JeniskueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class TestimoniController extends Controller
      */
     public function index()
     {
-        $testimoni = testimoni::all();
-        return view('admin.testimoni.index', compact('testimoni'));
+        $jeniskue = jeniskue::all();
+        return view('admin.jeniskue.index', compact('jeniskue'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TestimoniController extends Controller
      */
     public function create()
     {
-        return view('testimoni.create');
+        return view('jeniskue.create');
     }
 
     /**
@@ -37,12 +37,13 @@ class TestimoniController extends Controller
      */
     public function store(Request $request)
     {
-        $testimoni = new Testimoni;
-        $testimoni->testimoni_kode = $request->testimoni_kode;
-        $testimoni->testimoni_nama = $request->testimoni_nama;
-        $testimoni->save();
+
+        $jeniskue = new jeniskue;
+        $jeniskue->jeniskue_kode = $request->jeniskue_kode;
+        $jeniskue->jeniskue_nama = $request->jeniskue_nama;
+        $jeniskue->save();
         //6.tampilkan berhasil
-        return redirect()->route('admin.testimoni.index')->with('success', 'Berhasil ditambah');;
+        return redirect()->route('admin.jeniskue.index')->with('success', 'Berhasil ditambah');;
     }
 
     /**
@@ -64,8 +65,8 @@ class TestimoniController extends Controller
      */
     public function edit($id)
     {
-        $testimoni = testimoni::findOrFail($id);
-        return view('admin.testimoni.edit', compact('testimoni'));
+        $jeniskue = jeniskue::findOrFail($id);
+        return view('admin.jeniskue.edit', compact('jeniskue'));
     }
 
     /**
@@ -77,11 +78,11 @@ class TestimoniController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $testimoni = testimoni::findOrFail($id);
-        $testimoni->testimoni_kode = $request->testimoni_kode;
-        $testimoni->testimoni_nama = $request->testimoni_nama;
-        $testimoni->save();
-        return redirect()->route('admin.testimoni.index')->with('edit', 'Berhasil diedit');;
+        $jeniskue = jeniskue::findOrFail($id);
+        $jeniskue->jeniskue_kode = $request->jeniskue_kode;
+        $jeniskue->jeniskue_nama = $request->jeniskue_nama;
+        $jeniskue->save();
+        return redirect()->route('admin.jeniskue.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -92,7 +93,7 @@ class TestimoniController extends Controller
      */
     public function destroy($id)
     {
-        if (!testimoni::destroy($id)) return redirect()->back();
-        return redirect()->route('admin.testimoni.index');
+        if (!jeniskue::destroy($id)) return redirect()->back();
+        return redirect()->route('admin.jeniskue.index');
     }
 }
