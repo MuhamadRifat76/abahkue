@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\testimoni;
 use Session;
+
 use Illuminate\Http\Request;
 
 class TestimoniController extends Controller
@@ -26,7 +27,7 @@ class TestimoniController extends Controller
      */
     public function create()
     {
-        return view('testimoni.create');
+        return view('admin.testimoni.create');
     }
 
     /**
@@ -38,8 +39,16 @@ class TestimoniController extends Controller
     public function store(Request $request)
     {
         $testimoni = new Testimoni;
-        $testimoni->testimoni_kode = $request->testimoni_kode;
-        $testimoni->testimoni_nama = $request->testimoni_nama;
+        $testimoni->nama = $request->nama;
+        $testimoni->deskripsi = $request->deskripsi;
+        $testimoni->tag = $request->tag;
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $path = public_path() . '/assets/img/testimoni';
+            $filename = str_random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($path, $filename);
+            $testimoni->foto = $filename;
+        }
         $testimoni->save();
         //6.tampilkan berhasil
         return redirect()->route('admin.testimoni.index')->with('success', 'Berhasil ditambah');;
