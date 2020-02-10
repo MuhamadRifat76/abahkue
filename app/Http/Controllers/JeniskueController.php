@@ -41,6 +41,13 @@ class JeniskueController extends Controller
         $jeniskue = new jeniskue;
         $jeniskue->jeniskue_kode = $request->jeniskue_kode;
         $jeniskue->jeniskue_nama = $request->jeniskue_nama;
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $path = public_path() . '/assets/img/jeniskue';
+            $filename = str_random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($path, $filename);
+            $jeniskue->foto = $filename;
+        }
         $jeniskue->save();
         //6.tampilkan berhasil
         return redirect()->route('admin.jeniskue.index')->with('success', 'Berhasil ditambah');;

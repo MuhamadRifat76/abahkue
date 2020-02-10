@@ -38,10 +38,9 @@ class TestimoniController extends Controller
      */
     public function store(Request $request)
     {
-        $testimoni = new Testimoni;
+        $testimoni = new testimoni;
         $testimoni->nama = $request->nama;
         $testimoni->deskripsi = $request->deskripsi;
-        $testimoni->tag = $request->tag;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $path = public_path() . '/assets/img/testimoni';

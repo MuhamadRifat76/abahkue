@@ -1,14 +1,14 @@
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Tambah Data</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('testimoni.store') }}" method="post">
+                <form action="{{ route('testimoni.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                 <div class="form-group">
                   <label for="nama">Nama</label>
@@ -16,13 +16,12 @@
                 </div>
                 <div class="form-group">
                     <label for="nama">Deskripsi</label>
-                  <textarea name="deskripsi" id="" cols="10px" width="100">
-            </div>
+                  <textarea name="deskripsi" id="ck" cols="30" width="10">
             </textarea>
-               <input required type="file" class="form-control" name="foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
-                 </div>
-                  <input type="text" readonly id="prepend-big-btn" disabled>
-                                        </div>
+            </div>
+            <div class="form-group">
+                <input required type="file" class="form-control" name="foto">
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
@@ -31,3 +30,7 @@
         </div>
     </div>
 </div>
+<script src="{{asset('ckeditor/ckeditor/ckeditor.js')}}"></script>
+<script>
+CKEDITOR.replace('ck');
+</script>

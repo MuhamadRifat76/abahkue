@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class testimoni extends Model
 {
-    //
+    protected $fillable = ['foto', 'nama', 'deskripsi'];
 }
