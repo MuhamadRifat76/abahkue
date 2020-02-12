@@ -123,19 +123,19 @@ with font-awesome or any other icon font library -->
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/admin/testimoni" class="nav-link active">
+                                    <a href="/admin/testimoni" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>testimoni</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/jeniskue" class="nav-link">
+                                    <a href="/admin/jeniskue" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>jeniskue</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/galerikegiatan" class="nav-link">
+                                    <a href="/admin/galerikegiatan" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Galeri Kegiatan</p>
                                     </a>
@@ -157,7 +157,7 @@ with font-awesome or any other icon font library -->
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">testimoni</h1>
+                            <h1 class="m-0 text-dark">galerikegiatan</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                         </div><!-- /.col -->
@@ -222,7 +222,7 @@ with font-awesome or any other icon font library -->
 <h5 class="card-header"></h5><br>
 <center>
     <button type="button" title="Tambah Data" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Tambah Data</button>
-    @include('admin.testimoni.create')
+    @include('admin.galerikegiatan.create')
 </center>
 <div class="card-body">
 <table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
@@ -230,35 +230,31 @@ with font-awesome or any other icon font library -->
 <tr>
 <th>No</th>
 <th>Nama</th>
-<th>Deskripsi</th>
 <th>Foto</th>
 <th style="text-align: center;">Aksi</th>
 </tr>
 </thead>
 <tbody>
     @php $no =1; @endphp
-@foreach ($testimoni as $data)
+@foreach ($galerikegiatan as $data)
 <tr>
 <td>{{$no++}}</td>
 <td>{{$data->nama}}</td>
-<td>{!!substr($data->deskripsi,0,25)!!}</td>
 
 
-<td><img src="{{asset('assets/img/testimoni/' .$data->foto. '')}}"
+
+<td><img src="{{asset('assets/img/galerikegiatan/' .$data->foto. '')}}"
 style="width:50px; height:50px;" alt="Foto"></td>
 <td style="text-align: center;">
-<form action="{{route('testimoni.destroy', $data->id)}}" method="post">
+<form action="{{route('galerikegiatan.destroy', $data->id)}}" method="post">
 {{csrf_field()}}
 <button type="button" title="Edit" data-toggle="modal" data-target=".bd-example-modal-lg-{{$data->id}}" class="btn btn-warning btn-fw btn-outline btn-sm">Edit</button>
-<a href="{{route('testimoni.show', $data->id)}}"
-class="zmdi zmdi-eye btn btn-success btn-rounded btn-floating btn-outline"> Show
-</a>
 <input type="hidden" name="_method" value="DELETE">
 <button type="submit" class="zmdi zmdi-delete btn-rounded btn-floating btn btn-dangerbtn btn-danger btn-outline"> Delete</button>
 </form>
 </td>
 </tr>
-@include('admin.testimoni.edit')
+@include('admin.galerikegiatan.edit')
 @endforeach
 </tbody>
 </table>

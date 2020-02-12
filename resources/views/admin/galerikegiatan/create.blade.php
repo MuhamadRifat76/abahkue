@@ -8,20 +8,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('jeniskue.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('galerikegiatan.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                 <div class="form-group">
                   <label for="nama">Nama</label>
                   <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" required>
                 </div>
-                <div class="form-group">
-                  <label for="harga">Harga</label>
-                  <input type="text" name="harga" id="harga" class="form-control" placeholder="Harga" required>
-                </div>
-                <div class="form-group">
-                    <label for="kategori">Kategori</label>
-                  <input type="kategori" id="kategori" class="form-control" placeholder="kategori" required">
-            </div>
             <div class="form-group">
                 <input required type="file" class="form-control" name="foto">
             </div>

@@ -126,13 +126,13 @@ Dashboard
 <li class="nav-item">
 <a href="/admin/testimoni" class="nav-link ">
 <i class="far fa-circle nav-icon"></i>
-<p>testimoni</p>
+<p>Testimoni</p>
 </a>
 </li>
 <li class="nav-item">
 <a href="/admin/jeniskue" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
-<p>jeniskue</p>
+<p>Jeniskue</p>
 </a>
 </li>
 <li class="nav-item">

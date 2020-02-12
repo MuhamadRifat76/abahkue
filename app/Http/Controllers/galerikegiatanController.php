@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\jeniskue;
+use App\galerikegiatan;
 use Session;
 use Illuminate\Http\Request;
 
-class JeniskueController extends Controller
+class galerikegiatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class JeniskueController extends Controller
      */
     public function index()
     {
-        $jeniskue = jeniskue::all();
-        return view('admin.jeniskue.index', compact('jeniskue'));
+        $galerikegiatan = galerikegiatan::all();
+        return view('admin.galerikegiatan.index', compact('galerikegiatan'));
     }
 
     /**
@@ -26,7 +26,7 @@ class JeniskueController extends Controller
      */
     public function create()
     {
-        return view('jeniskue.create');
+        return view('galerikegiatan.create');
     }
 
     /**
@@ -37,22 +37,20 @@ class JeniskueController extends Controller
      */
     public function store(Request $request)
     {
-
-        $jeniskue = new jeniskue;
-        $jeniskue->nama = $request->nama;
-        $jeniskue->kategori = $request->kategori;
-        $jeniskue->harga = $request->harga;
+        $galerikegiatan = new galerikegiatan;
+        $galerikegiatan->nama = $request->nama;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path() . '/assets/img/jeniskue';
+            $path = public_path() . '/assets/img/galerikegiatan';
             $filename = str_random(6) . '_' . $file->getClientOriginalName();
             $upload = $file->move($path, $filename);
-            $jeniskue->foto = $filename;
+            $galerikegiatan->foto = $filename;
         }
-        $jeniskue->save();
+        $galerikegiatan->save();
         //6.tampilkan berhasil
-        return redirect()->route('jeniskue.index')->with('success', 'Berhasil ditambah');;
+        return redirect()->route('galerikegiatan.index')->with('success', 'Berhasil ditambah');;
     }
+
 
     /**
      * Display the specified resource.
@@ -73,8 +71,9 @@ class JeniskueController extends Controller
      */
     public function edit($id)
     {
-        $jeniskue = jeniskue::findOrFail($id);
-        return view('admin.jeniskue.edit', compact('jeniskue'));
+
+        $galerikegiatan = galerikegiatan::findOrFail($id);
+        return view('admin.galerikegiatan.edit', compact('galerikegiatan'));
     }
 
     /**
@@ -86,11 +85,10 @@ class JeniskueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $jeniskue = jeniskue::findOrFail($id);
-        $jeniskue->jeniskue_kode = $request->jeniskue_kode;
-        $jeniskue->jeniskue_nama = $request->jeniskue_nama;
-        $jeniskue->save();
-        return redirect()->route('admin.jeniskue.index')->with('edit', 'Berhasil diedit');;
+        $galerikegiatan = galerikegiatan::findOrFail($id);
+        $galerikegiatan->nama = $request->nama;
+        $galerikegiatan->save();
+        return redirect()->route('galerikegiatan.index')->with('edit', 'Berhasil diedit');
     }
 
     /**
@@ -101,7 +99,7 @@ class JeniskueController extends Controller
      */
     public function destroy($id)
     {
-        if (!jeniskue::destroy($id)) return redirect()->back();
-        return redirect()->route('admin.jeniskue.index');
+        if (!galerikegiatan::destroy($id)) return redirect()->back();
+        return redirect()->route('galerikegiatan.index');
     }
 }

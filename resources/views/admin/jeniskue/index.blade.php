@@ -124,13 +124,13 @@ Dashboard
 </a>
 <ul class="nav nav-treeview">
 <li class="nav-item">
-<a href="/admin/testimoni" class="nav-link ">
+<a href="/admin/testimoni" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>testimoni</p>
 </a>
 </li>
 <li class="nav-item">
-<a href="/admin/jeniskue" class="nav-link">
+<a href="/admin/jeniskue" class="nav-link active">
 <i class="far fa-circle nav-icon"></i>
 <p>jeniskue</p>
 </a>
@@ -172,12 +172,10 @@ Dashboard
 <div class="row">
 <div class="col-12">
 <div class="card">
-<h5 class="card-header">Jenis Kue</h5><br>
+<h5 class="card-header"></h5><br>
 <center>
-<p></p>
-<a href="{{ route('testimoni.create') }}"
-class="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nbsp;Tambah Data
-</a>
+<button type="button" title="Tambah Data" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Tambah Data</button>
+    @include('admin.jeniskue.create')
 </center>
 <div class="card-body">
 <table id="bs4-table" class="table table-striped table-bordered" style="width:100%">
@@ -185,32 +183,32 @@ class="la la-cloud-upload btn btn-info btn-rounded btn-floating btn-outline">&nb
 <tr>
 <th>No</th>
 <th>Nama</th>
-<th>Tag</th>
-<th>Kategori-</th>
+<th>Harga</th>
+<th>Kategori</th>
 <th>Foto</th>
 <th style="text-align: center;">Aksi</th>
 </tr>
 </thead>
 <tbody>
+    @php $no =1; @endphp
 @foreach ($jeniskue as $data)
 <tr>
-<td>{{$data->judul}}</td>
-<td>{{$data->slug}}</td>
+<td>{{$no++}}</td>
+<tr>
+<td>{{$data->nama}}</td>
+<td>{{$data->harga}}</td>
+<td>{{$data->kategori}}</td>
 <td>
-@foreach ($data->tag as $tag)
-{{ $tag->nama_tag }}
-@endforeach</td>
-<td>{{$data->kategori->nama_kategori}}</td>
-<td>{{$data->user->name}}</td>
-<td><img src="{{asset('assets/img/testimoni/' .$data->foto. '')}}"
+
+<td><img src="{{asset('assets/img/jeniskue/' .$data->foto. '')}}"
 style="width:50px; height:50px;" alt="Foto"></td>
 <td style="text-align: center;">
-<form action="{{route('testimoni.destroy', $data->id)}}" method="post">
+<form action="{{route('jeniskue.destroy', $data->id)}}" method="post">
 {{csrf_field()}}
-<a href="{{route('testimoni.edit', $data->id)}}"
+<a href="{{route('jeniskue.edit', $data->id)}}"
 class="zmdi zmdi-edit btn btn-warning btn-rounded btn-floating btn-outline"> Edit
 </a>
-<a href="{{route('testimoni.show', $data->id)}}"
+<a href="{{route('jeniskue.show', $data->id)}}"
 class="zmdi zmdi-eye btn btn-success btn-rounded btn-floating btn-outline"> Show
 </a>
 <input type="hidden" name="_method" value="DELETE">
