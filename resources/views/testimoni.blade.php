@@ -41,12 +41,12 @@
 	          <li class="nav-item dropdown">
 
             </li>
-	          <li class="nav-item active"><a href="about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
-              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
               <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+              <li class="nav-item active"><a href="testimoni" class="nav-link">Testimoni</a></li>
+              <li class="nav-item "><a href="about" class="nav-link">About</a></li>
+               <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"></li>
 
 	        </ul>
 	      </div>
@@ -75,82 +75,30 @@
             <p>beberapa pendapat orang terhadap produk abah kue</p>
           </div>
         </div>
+
         <div class="row ftco-animate">
+            @foreach ($testimoni as $data)
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
+                  {{-- <div class="user-img mb-5" style="background-image: url('/assets/img/testimoni'.$data->foto)"> --}}
+                  <img src="{{asset('assets/img/testimoni/'.$data->foto)}}" alt="Image">
                     <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
+                      {{-- <i class="icon-quote-left"></i> --}}
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Menurut saya produk dari Abah Kue ini sangatlah enak ditambah lagi harganya murah meriah.</p>
-                    <p class="name">Naga Bonar</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_2.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(/frontend/vegefoods/images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
+                  <p class="mb-5 pl-4 line">{!!$data->deskripsi!!}</p>
+                    <p class="name">{{$data->nama}}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+            @endforeach
         </div>
+
       </div>
     </section>
 

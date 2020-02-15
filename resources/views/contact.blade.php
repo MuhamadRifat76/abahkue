@@ -41,12 +41,12 @@
 	          <li class="nav-item dropdown">
 
             </li>
-	          <li class="nav-item"><a href="about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
-              <li class="nav-item active"><a href="contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
-              <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+               <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
+               <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
+               <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+               <li class="nav-item active"><a href="contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"></li>
 
 	        </ul>
 	      </div>
@@ -113,7 +113,9 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
+          	<div  class="bg-white">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5615274329534!2d107.59369871477305!3d-6.9428881949838495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8bdc1cf149f%3A0x7d3e7e1c47475e1f!2sJl.%20Leuwi%20Panjang%2C%20Situsaeur%2C%20Kec.%20Bojongloa%20Kidul%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1581581727212!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
           </div>
         </div>
       </div>

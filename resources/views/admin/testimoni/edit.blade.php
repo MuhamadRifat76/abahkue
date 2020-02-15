@@ -20,8 +20,7 @@
                 <textarea name="deskripsi" id="cke" cols="30" width="10">{{$data->deskripsi}}</textarea>
             </div>
             <div class="form-group">
-            <img src="{{asset('assets/img/testimoni/' .$data->foto. '')}}"
-style="width:50px; height:50px;" alt="Foto">
+            <img src="{{asset('assets/img/testimoni/' .$data->foto. '')}}"style="width:50px; height:50px;" alt="Foto">
             <input required type="file" class="form-control" value="{{$data->foto}}" name="foto">
             </div>
             <div class="modal-footer">

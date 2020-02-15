@@ -241,9 +241,7 @@ with font-awesome or any other icon font library -->
 <tr>
 <td>{{$no++}}</td>
 <td>{{$data->nama}}</td>
-<td>{!!substr($data->deskripsi,0,25)!!}</td>
-
-
+<td>{!!$data->deskripsi!!}</td>
 <td><img src="{{asset('assets/img/testimoni/' .$data->foto. '')}}"
 style="width:50px; height:50px;" alt="Foto"></td>
 <td style="text-align: center;">

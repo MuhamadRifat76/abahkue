@@ -39,20 +39,14 @@ Route::get('/login', function () {
 Route::get('/admin', function () {
     return view('index2');
 });
-Route::get('/testimoni', function () {
-    return view('testimoni');
-});
-Route::get('/galerikegiatan', function () {
-    return view('galerikegiatan');
-});
+Route::get('/testimoni', 'FrontController@index')->name('testimoni');
+Route::get('/galerikegiatan', 'FrontController@galerikegiatan')->name('galerikegiatan');
 
-
+Route::get('/index', 'FrontController@index');
 
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-
-
     Route::resource('/testimoni', 'TestimoniController');
     Route::resource('/jeniskue', 'JeniskueController');
     Route::resource('/galerikegiatan', 'galerikegiatanController');

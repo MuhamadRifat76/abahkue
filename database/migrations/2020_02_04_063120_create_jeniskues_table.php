@@ -16,7 +16,7 @@ class CreateJeniskuesTable extends Migration
         Schema::create('jeniskues', function (Blueprint $table) {
             $table->increments('id');
             $table->string('foto');
-            $table->string('kategori');
+            $table->string('kategori_jeniskue');
             $table->integer('harga');
             $table->string('nama');
 

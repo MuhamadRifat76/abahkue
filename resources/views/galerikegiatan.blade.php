@@ -43,12 +43,12 @@
 
 
             </li>
-	          <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-	          <li class="nav-item active"><a href="blog" class="nav-link">Blog</a></li>
-              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+              <li class="nav-item active"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
               <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a></li>
-              <li class="nav-item"><a href="galerikegiatan" class="nav-link">Galeri Kegiatan</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart." class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+              <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+               <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"></li>
 
 	        </ul>
 	      </div>
@@ -72,111 +72,17 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
 						<div class="row">
+                                  @foreach ($galerikegiatan as $data)
 							<div class="col-md-12 d-flex ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single" class="block-20" style="background-image: url('/frontend/vegefoods/images/20.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Donat</a></h3>
-		                <p>adalah penganan yang digoreng, dibuat dari adonan tepung terigu,mentega,gula dan telur Donat yang paling umum adalah donat berbentuk cincin dengan lubang di tengah dan donat berbentuk bundar dengan isian manis, seperti selai, jelly, krim, dan custard. .</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
+		              {{-- <a href="blog-single" class="block-20" style="background-image: url('/frontend/vegefoods/images/20.jpg');">
+                      </a> --}}
+                      <img src="{{asset('assets/img/galerikegiatan/'.$data->foto)}}" alt="Image">
+                       <div class="text text-center">
+                    <p class="name">{{$data->nama}}</p>
+                  </div>
+                   @endforeach
 		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="single-blog" class="block-20" style="background-image: url('/frontend/vegefoods/images/9.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Kue Bugis</a></h3>
-		                <p>Salah satu yang jadi favorit ialah kue bugis. Kue hijau berbentuk kerucut itu dipercaya berasal dari Sulawesi Selatan, asal suku Bugis. Hal itu terkait dengan nama yang disematkan pada kue ini.
-
-Meskipun demikian, kue bugis ada di beberapa daerah di Indonesia juga. Di Jawa, kue bugis dikenal dengan kue mendut, di Sumatra Barat, kue berbahan dasar ketan ini disebut bugih, sedangkan di Bali, orang menyebutnya dengan lepet bugis.
-
-Tak hanya berwarna hijau dari sari pandan atau daun suji, ada juga bugis yang terbuat dari ketan hitam yang unti dalamnya berwarna putih. Hijau ataupun hitam, kue bugis tetap manis dan lezat..</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="single-blog" class="block-20" style="background-image: url('/frontend/vegefoods/images/10.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Kue Salju</a></h3>
-		                <p>salju menjadi salah satu satu produk kue kering klasik favorit. Berbentuk bulan sabit, kue ini disebut sebagai 'putri salju' karena terdapat taburan gula putih yang lembut di atasnya. Rasanya manis, gurih, lembut di lidah, hancur dalam sekali gigit, dan bisa meninggalkan kesan dingin di mulut.
-
-Kue Nusantara putri salju ini juga terkenal hingga luar negeri, seperti Austria dan Jerman. Cara membuat putri salju sebenarnya tidak terlalu jauh berbeda dengan nastar pada umumnya. Aromanya bakal lebih istimewa kalau kamu menggunakan mentega.</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="single-blog" class="block-20" style="background-image: url('/frontend/vegefoods/images/17.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Kue Nastar</a></h3>
-		                <p>Hampir semua masyarakat Indonesia pasti sudah tidak asing lagi dengan kue nastar. Kue nastar sering muncul saat hari raya Idul Fitri. Rasanya yang lezat dan enak membuat kue nastar sangat digemari oleh banyak orang dari berbagai kalangan.</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="single-blog" class="block-20" style="background-image: url('/frontend/vegefoods/images/image_5.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-		                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="blog-single" class="block-20" style="background-image: url('/frontend/vegefoods/images/image_6.jpg');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#">July 20, 2019</a></div>
-		                  <div><a href="#">Admin</a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-		                </div>
-		                <h3 class="heading"><a href="single-blog">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-		                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		                <p><a href="single-blog" class="btn btn-primary py-2 px-3">Read more</a></p>
-		              </div>
-		            </div>
-		          </div>
-						</div>
-          </div> <!-- .col-md-8 -->
-
     </section> <!-- .section -->
 
     <footer class="ftco-footer ftco-section bg-light">
