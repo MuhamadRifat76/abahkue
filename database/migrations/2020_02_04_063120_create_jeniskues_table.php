@@ -14,12 +14,13 @@ class CreateJeniskuesTable extends Migration
     public function up()
     {
         Schema::create('jeniskues', function (Blueprint $table) {
-            $table->increments('id');
+            $table->Increments('id');
             $table->string('foto');
-            $table->string('kategori_jeniskue');
+            $table->Integer('categoris_id')->unsigned();
+            $table->foreign('categoris_id')->references('id')->on('categoris')->onDelete('CASCADE');
+
             $table->integer('harga');
             $table->string('nama');
-
             $table->timestamps();
         });
     }

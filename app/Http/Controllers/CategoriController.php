@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\jeniskue;
+use session;
 use App\categori;
-use Session;
 use Illuminate\Http\Request;
 
-class JeniskueController extends Controller
+class CategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class JeniskueController extends Controller
      */
     public function index()
     {
-        $jeniskue = jeniskue::all();
+
         $categori = categori::all();
-        return view('admin.jeniskue.index', compact('jeniskue', 'categori'));
+        return view('admin.categori.index', compact('categori'));
     }
 
     /**
@@ -28,8 +27,7 @@ class JeniskueController extends Controller
      */
     public function create()
     {
-        $categori = categori::all();
-        return view('jeniskue.create', compact('categori'));
+        return view('categori.create');
     }
 
     /**
@@ -40,22 +38,20 @@ class JeniskueController extends Controller
      */
     public function store(Request $request)
     {
-
-        $jeniskue = new jeniskue;
-        $jeniskue->nama = $request->nama;
-        $jeniskue->categoris_id = $request->kategori;
-        $jeniskue->harga = $request->harga;
+        $categori = new categori;
+        $categori->nama = $request->nama;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
-            $path = public_path() . '/assets/img/jeniskue';
+            $path = public_path() . '/assets/img/categori';
             $filename = str_random(6) . '_' . $file->getClientOriginalName();
             $upload = $file->move($path, $filename);
-            $jeniskue->foto = $filename;
+            $categori->foto = $filename;
         }
-        $jeniskue->save();
+        $categori->save();
         //6.tampilkan berhasil
-        return redirect()->route('jeniskue.index')->with('success', 'Berhasil ditambah');;
+        return redirect()->route('categori.index')->with('success', 'Berhasil ditambah');;
     }
+
 
     /**
      * Display the specified resource.
@@ -76,8 +72,7 @@ class JeniskueController extends Controller
      */
     public function edit($id)
     {
-        $jeniskue = jeniskue::findOrFail($id);
-        return view('admin.jeniskue.edit', compact('jeniskue'));
+        //
     }
 
     /**
@@ -89,11 +84,7 @@ class JeniskueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $jeniskue = jeniskue::findOrFail($id);
-        $jeniskue->jeniskue_kode = $request->jeniskue_kode;
-        $jeniskue->jeniskue_nama = $request->jeniskue_nama;
-        $jeniskue->save();
-        return redirect()->route('admin.jeniskue.index')->with('edit', 'Berhasil diedit');;
+        //
     }
 
     /**
@@ -104,7 +95,6 @@ class JeniskueController extends Controller
      */
     public function destroy($id)
     {
-        if (!jeniskue::destroy($id)) return redirect()->back();
-        return redirect()->route('admin.jeniskue.index');
+        //
     }
 }

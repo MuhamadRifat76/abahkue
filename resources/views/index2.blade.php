@@ -141,6 +141,12 @@ Dashboard
 <p>Galeri Kegiatan</p>
 </a>
 </li>
+<li class="nav-item">
+<a href="/admin/categori" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Kategori</p>
+</a>
+</li>
 <button type="button" class="btn btn-danger"><a href="/login">Keluar</a></button>
 </ul>
 </li>

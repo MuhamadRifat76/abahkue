@@ -30,6 +30,9 @@ Route::get('/blog', function () {
 Route::get('/single-blog', function () {
     return view('single-blog');
 });
+Route::get('/single-post', function () {
+    return view('single-post');
+});
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -50,4 +53,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('/testimoni', 'TestimoniController');
     Route::resource('/jeniskue', 'JeniskueController');
     Route::resource('/galerikegiatan', 'galerikegiatanController');
+    Route::resource('/categori', 'CategoriController');
 });
